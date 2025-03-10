@@ -55,3 +55,14 @@ ticket.appendChild(priorityState);
 ticket.appendChild(resolveButton);
 ticketContainer.appendChild(ticket); // appending ticket to container
 //Task 5: Inline Editing of Support Tickets
+
+//customer name heading
+const customerNameHeading = document.createElement("h3");
+customerNameHeading.innerText = customerName;
+ticket.appendChild(customerNameHeading);
+//priority levels
+const priorityLabel = document.createElement("label");
+//Create the resolve button
+const resolvebutton = document.createElement("button");
+resolveButton.innerText = "Resolve";
+
