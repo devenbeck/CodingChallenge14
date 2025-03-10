@@ -31,4 +31,13 @@ function createSupportTicket(customerName, issueDescription, priorityLevel) {
 // test case
 createSupportTicket("Natalie Dev", "Cannot log in to the account", "High");
 
-//Task 3:
+//Task 3: Converting Node Lists to Arrays for Bulk Updates
+function highlightHighPriorityTickets() {
+    const highlightHighPriorityTickets = document.querySelectorAll('.high');  //went back to const
+    const highPriorityArray = Array.from(highlightHighPriorityTickets);
+
+    highPriorityArray.forEach(ticket => {
+        ticket.style.backgroundColor = 'lightgreen'; // background color
+        ticket.style.border = '2px solid black'; // add border
+    });
+}
