@@ -40,4 +40,18 @@ function highlightHighPriorityTickets() {
         ticket.style.backgroundColor = 'lightgreen'; // background color
         ticket.style.border = '2px solid black'; // add border
     });
+    highlightHighPriorityTickets();
 }
+
+//Task 4: Implementing Ticket Resolution with Event Bubbling
+resolveButton.addEventListener('click', function(event) {
+    ticketContainer.removeChild(ticket); // removing ticket from container
+    event.stopPropagation();
+})
+// appending elements to ticket
+ticket.appendChild(nameHeading);
+ticket.appendChild(issueText);
+ticket.appendChild(priorityState);
+ticket.appendChild(resolveButton);
+ticketContainer.appendChild(ticket); // appending ticket to container
+//Task 5: Inline Editing of Support Tickets
